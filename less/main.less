@@ -34,7 +34,7 @@ p{
 	line-height:1.6em;
 }
 
-a{
+a {
 	color:@primary;
 }
 
@@ -47,10 +47,8 @@ a:hover, a:focus{
 
 .navbar {
 	margin-bottom:0;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	text-transform:uppercase;
 	font-family:"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background-color:@dark;
 }
 
 .navbar-brand{
@@ -62,18 +60,19 @@ a:hover, a:focus{
 }
 
 .navbar-custom a{
-	color:@light
+	color: @light
 }
 
 .navbar-custom .navbar li a {
 	-webkit-transition: background .3s ease-in-out;
-	-ms-transition: background .3s ease-in-out;
+	-moz-transition: background .3s ease-in-out;
+	-o-transition: background .3s ease-in-out;
 	transition: background .3s ease-in-out;
 }
 
 .nav li a:hover {
 	outline: none;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .navbar-toggle {
@@ -84,11 +83,14 @@ a:hover, a:focus{
 
 @media(min-width: 767px) {
 	.navbar {
-		
-		border-bottom: none;
 		background: trasparent;
+		
+	}
+
+	.navbar li a {
 		-webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
 		-moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+		-o-transition: background .5s ease-in-out, padding .5s ease-in-out;
 		transition: background .5s ease-in-out, padding .5s ease-in-out;
 	}
 
@@ -98,13 +100,65 @@ a:hover, a:focus{
 	}
 
 	.navbar-custom, top-nav-collapse {
-		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		
 	}
 }
 
 // Landing Page
+
 .intro {
-	display: table;
 	width: 100%;
 	height: auto;
+	padding:100px 0px;
+	text-align:center;
+	color:@light;
+	display: table;
+	background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.intro-body {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.brand-heading {
+	font-size: 40px;
+}
+
+.intro-text {
+	font-size: 18px;
+}
+
+@media(min-width: 767px) {
+	.intro {
+		height: 100%;
+		padding: 0;
+
+	}
+	.brand-heading {
+		font-size: 100px;
+	}
+	.intro-text {
+		font-size: 25px;
+	}
+}
+
+// Content Section
+
+.content-section {
+	padding: 150px 0;
+}
+
+// Icon Blocks
+
+.block-icon-left {
+	overflow: auto;
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0 0 10px 0;
+		padding: 0;
+	}
 }
